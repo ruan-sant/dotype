@@ -1,0 +1,201 @@
+* {
+    font-family: Roboto Mono, Arial;
+}
+
+body {
+    /* background-color: #323437; */
+    background-color: #202224;
+    margin: 0;
+    padding-top: 100px;
+}
+
+a {
+    cursor: default;
+}
+
+.header {
+    background: transparent;
+    position: absolute;
+    top: 25px;
+    left: 23vw;
+}
+
+.dotype-header-title {
+    display: inline-block;
+    text-decoration: none;
+    color: #d1d0c5;
+    font-size: 2em;
+    user-select: none;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+.words {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    font-size: 2em;
+    display: flex;
+    width: 58vw;
+    height: 150px;
+    line-height: 50px;
+    cursor: default;
+    margin-bottom: 35px;
+    color: #646669;
+    user-select: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    padding-top: 30px;
+}
+
+.words-overflow {
+    overflow: visible;
+}
+
+.fa-redo-alt {
+    position: relative;
+    color: #646669;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: color 0.2s, opacity 0.3s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.words-show {
+    opacity: 1;
+}
+
+.word {
+    display: flex;
+    margin-right: 1ch;
+}
+
+.word span {
+    white-space: pre;
+}
+
+/*
+.input-area {
+    all: unset;
+    color: #d1d0c5;
+    position: absolute;
+    white-space: pre-wrap;
+    overflow: hidden;
+    width: 58vw;
+}
+    */
+
+.fa-redo-alt:hover {
+    color: #d1d0c5;
+}
+
+.right-key-pressed {
+    color: #d1d0c5;
+}
+
+.wrong-key-pressed {
+    color: #ca4754;
+}
+
+.timer {
+    position: absolute;
+    top: -12px;
+    left: 2px;
+    font-size: 1.1em;
+    color: #d1d0c5;
+}
+
+.js-words {
+  position: relative;
+}
+
+.caret {
+  position: absolute; 
+  margin-top: 6px;
+  display: block; 
+  width: 3px;
+  height: 1.2em;
+  background-color: #fff;
+  vertical-align: bottom;
+  transition: top 0.1s, left 0.1s;
+}
+
+.caret-animation {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.game-result {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+h3 {
+  font-size: 1.1em;
+  color: #d1d0c5;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.typo {
+  color: #ca4754;
+}
+
+.wpm:hover .info, .accuracy:hover .info, .typo:hover .info, .fa-redo-alt:hover .info {
+  opacity: 1;
+}
+
+.info {
+  color: #d1d0c5;
+  opacity: 0;
+  display: flex;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 0.4em;
+  align-items: center;
+  font-weight: 400;
+  justify-content: center;
+  padding: 0 14px;
+  height: 32px;
+  position: absolute;
+  bottom: -40px;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.fa-redo-alt .info {
+  font-size: 0.8em;
+}
+
+.record {
+  position: absolute;
+  color: #646669;
+  font-size: 0.6em;
+  top: -35px;
+  right: 0;
+  font-weight: 400;
+  pointer-events: none;
+}
